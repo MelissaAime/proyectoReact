@@ -1,0 +1,27 @@
+.header{
+    padding: 20px 40px;
+    width: 100%;
+    background-color: rgba(0, 98, 255, 0.678);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.header-item{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
