@@ -1,0 +1,10 @@
+@import './variables.scss';
+@import '../components/NavBar/NavBar.scss';
+@import '../components/ItemListContainer/ItemListContainer.scss';
+@import '../components/MainContent/MainContent.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
