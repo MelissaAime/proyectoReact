@@ -1,0 +1,14 @@
+
+.button-mystyle{
+    background-color: $color-principal;
+    border-color: darken($color: $color-principal, $amount: 20);
+
+    &:hover{
+        background-color: darken($color: $color-principal, $amount: 30);
+        border-color: darken($color: $color-principal, $amount: 40);
+    }
+
+    &:active{
+        background-color: $color-secondary;
+    }
+}
