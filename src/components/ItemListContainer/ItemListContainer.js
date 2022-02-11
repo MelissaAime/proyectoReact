@@ -5,7 +5,7 @@ import { Loading } from '../Loading/Loading'
 import './ItemListContainer.scss'
 import { useParams } from 'react-router-dom'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState (false)

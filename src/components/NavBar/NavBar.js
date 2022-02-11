@@ -17,15 +17,15 @@ export const NavBar = () => {
                         className="d-inline-block align-top"
                         alt="logo"
                     />
-                    <Link to='/'><Navbar.Brand>Nombre</Navbar.Brand></Link> 
+                    <Link to='/'><Navbar.Brand>TRAPAO</Navbar.Brand></Link> 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                         <Nav.Link><Link to='/'> Inicio </Link></Nav.Link>
                         <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                            <NavDropdown.Item><Link to='/productos/uno'> Producto 1 </Link></NavDropdown.Item>
-                            <NavDropdown.Item><Link to='/productos/dos'> Producto 2 </Link></NavDropdown.Item>
-                            <NavDropdown.Item><Link to='/productos/tres'> Producto 3 </Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos/carteras'> Carteras </Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos/mochilas'> Mochilas </Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos/billeteras'> Billeteras </Link></NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item><Link to='/productos'> Todos los productos </Link></NavDropdown.Item>
                         </NavDropdown>

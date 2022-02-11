@@ -3,7 +3,7 @@ export const Contact = () => {
 
     return(
         <div>
-            <p>Contactanos...</p>
+            <h2>Contactanos...</h2>
         </div>
     )
 }
