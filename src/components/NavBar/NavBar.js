@@ -2,6 +2,7 @@ import { Navbar } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
     return(
@@ -16,21 +17,21 @@ export const NavBar = () => {
                         className="d-inline-block align-top"
                         alt="logo"
                     />
-                    <Navbar.Brand href="#">Nombre</Navbar.Brand>
+                    <Link to='/'><Navbar.Brand>Nombre</Navbar.Brand></Link> 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                        <Nav.Link href="#">Art 1</Nav.Link>
-                        <NavDropdown title="Art 2" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#">Item 1</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Item 2</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Item 3</NavDropdown.Item>
+                        <Nav.Link><Link to='/'> Inicio </Link></Nav.Link>
+                        <NavDropdown title="Productos" id="collasible-nav-dropdown">
+                            <NavDropdown.Item><Link to='/productos/uno'> Producto 1 </Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos/dos'> Producto 2 </Link></NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos/tres'> Producto 3 </Link></NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#">All</NavDropdown.Item>
+                            <NavDropdown.Item><Link to='/productos'> Todos los productos </Link></NavDropdown.Item>
                         </NavDropdown>
                         </Nav>
                         <Nav>
-                        <Nav.Link href="#">Art 3</Nav.Link>
+                        <Nav.Link> <Link to='/contacto'> Contacto </Link> </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

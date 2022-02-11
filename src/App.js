@@ -3,14 +3,27 @@ import MainContent from './components/MainContent/MainContent' //importacion por
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
+import { BrowserRouter, Routes, Route , Navigate } from 'react-router-dom';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { Contact } from './components/Contact/Contact';
 
 function App() {
   return (
-    <>
-      <NavBar/>
-      <MainContent titulo="Un titulo" texto="Saludo"/>
-      <ItemListContainer greeting="Bienvenidos"/>
-    </>
+    <BrowserRouter> 
+
+        <NavBar/>
+
+        <Routes>
+            <Route path='/' element={<MainContent titulo="Bienvenidos" texto="Hola, bienvenidos a mi tienda"/>}/>
+            <Route path='/productos' element={ <ItemListContainer/> } />
+            <Route path='/productos/:categId' element={ <ItemListContainer/> } />
+            <Route path='/detalles/:itemId' element={ <ItemDetailContainer/> } />
+            <Route path='/contacto' element= { <Contact/> } />
+            <Route path='*' element={ <Navigate to='/' /> } />
+        </Routes>
+
+        {/* <Footer/> */}
+    </BrowserRouter>
   );
 }
 

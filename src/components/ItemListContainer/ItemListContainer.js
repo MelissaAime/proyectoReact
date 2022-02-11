@@ -3,28 +3,38 @@ import { seeStock } from '../../functions/seeStock'
 import { ItemList } from '../ItemList/ItemList'
 import { Loading } from '../Loading/Loading'
 import './ItemListContainer.scss'
+import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = ({greeting}) => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState (false)
 
+    const { categId } = useParams()
+
     useEffect( () => {
 
         setLoading(true)
 
         seeStock()
-            .then((result) => {setProducts(result)})
-            .catch((err) => {console.log(err)})
+            .then((result) => {
+                if (categId){
+                   setProducts( result.filter( (el) => el.category === categId) ) 
+                } else {
+                    setProducts(result)
+                }
+                
+            })
+            .catch((err) => {
+                console.log(err)
+            })
             .finally(() => {
                 setLoading(false)
             })
-    }, [])
+    }, [categId])
 
     return (
         <section className="item-list-container">
-            <h2 className="item-list-title">{greeting}</h2>
-            <hr/>
             
             { loading ? <Loading/> : <ItemList products={products} />}
             
