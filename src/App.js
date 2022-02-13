@@ -6,6 +6,7 @@ import './styles/styles.scss';
 import { BrowserRouter, Routes, Route , Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Contact } from './components/Contact/Contact';
+import { Form } from './components/Form/Form';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/productos/:categId' element={ <ItemListContainer/> } />
             <Route path='/detalles/:itemId' element={ <ItemDetailContainer/> } />
             <Route path='/contacto' element= { <Contact/> } />
+            <Route path='/contacto' element= { <Form/> } />
             <Route path='*' element={ <Navigate to='/' /> } />
         </Routes>
 
