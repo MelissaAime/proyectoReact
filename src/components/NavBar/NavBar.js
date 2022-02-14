@@ -17,21 +17,21 @@ export const NavBar = () => {
                         className="d-inline-block align-top"
                         alt="logo"
                     />
-                    <Link to='/'><Navbar.Brand>TRAPAO</Navbar.Brand></Link> 
+                    <Link to='/' className='navbar-brand'>TRAPAO</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                        <Nav.Link><Link to='/'> Inicio </Link></Nav.Link>
-                        <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                            <NavDropdown.Item><Link to='/productos/carteras'> Carteras </Link></NavDropdown.Item>
-                            <NavDropdown.Item><Link to='/productos/mochilas'> Mochilas </Link></NavDropdown.Item>
-                            <NavDropdown.Item><Link to='/productos/billeteras'> Billeteras </Link></NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item><Link to='/productos'> Todos los productos </Link></NavDropdown.Item>
-                        </NavDropdown>
+                            <Link to='/' role='button' className='nav-link'>Inicio</Link>
+                            <NavDropdown title="Productos" id="collasible-nav-dropdown">
+                                <Link to='/productos/carteras' className='dropdown-item' role='button'>Carteras</Link>
+                                <Link to='/productos/mochilas' className='dropdown-item' role='button'>Mochilas</Link>
+                                <Link to='/productos/billeteras' className='dropdown-item' role='button'>Billeteras</Link>
+                                <NavDropdown.Divider />
+                                <Link to='/productos' className='dropdown-item' role='button'>Todos los productos</Link>
+                            </NavDropdown>
                         </Nav>
                         <Nav>
-                        <Nav.Link> <Link to='/contacto'> Contacto </Link> </Nav.Link>
+                            <Link to='/contacto' role='button' className='nav-link'>Contacto</Link> 
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
