@@ -8,7 +8,7 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
 
     const [cantidad, setCantidad] = useState(0)
 
-    const { cart, agregarAlCarrito, isInCart } = useContext (CartContext)
+    const { cart, addToCart, isInCart } = useContext (CartContext)
 
     console.log(cart);
 
@@ -20,7 +20,7 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
                 id, name, price, stock, cantidad 
             }
     
-            agregarAlCarrito(addItem)
+            addToCart(addItem)
         }
 
         
