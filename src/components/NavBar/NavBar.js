@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export const NavBar = () => {
     return(
@@ -33,6 +34,9 @@ export const NavBar = () => {
                         <Nav>
                             <Link to='/contacto' role='button' className='nav-link'>Contacto</Link> 
                         </Nav>
+
+                        <CartWidget/>
+                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
