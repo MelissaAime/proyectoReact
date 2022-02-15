@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
 import { BrowserRouter, Routes, Route , Navigate } from 'react-router-dom';
-import {NavBar} from './components/NavBar/NavBar'
-import MainContent from './components/MainContent/MainContent' //importacion por defecto
+import { NavBar } from './components/NavBar/NavBar';
+import { MainContent } from './components/MainContent/MainContent';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Contact } from './components/Contact/Contact';
 import { Form } from './components/Form/Form';
-import { CartProvider } from '../src/context/CartContext';
+import { CartProvider } from './context/CartContext';
 import { Cart } from './components/Cart/Cart';
 
 function App() {

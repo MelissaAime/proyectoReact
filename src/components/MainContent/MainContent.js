@@ -1,6 +1,6 @@
 import './MainContent.scss'
 
-const MainContent = ({titulo, texto}) => {
+export const MainContent = ({titulo, texto}) => {
     
     return (
 
@@ -10,5 +10,3 @@ const MainContent = ({titulo, texto}) => {
         </main>
     )
 }
-
-export default MainContent;
