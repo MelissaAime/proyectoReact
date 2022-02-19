@@ -9,6 +9,7 @@ import { Contact } from './components/Contact/Contact';
 import { Form } from './components/Form/Form';
 import { CartProvider } from './context/CartContext';
 import { Cart } from './components/Cart/Cart';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
           <NavBar/>
 
           <Routes>
-              <Route path='/' element={<MainContent titulo="Bienvenidos" texto="Hola, bienvenidos a TRAPAO, aquí encontrarán carteras, mochilas y billeteras"/>}/>
+              <Route path='/' element={<MainContent/>} />
               <Route path='/productos' element={ <ItemListContainer/> } />
               <Route path='/productos/:categId' element={ <ItemListContainer/> } />
               <Route path='/detalles/:itemId' element={ <ItemDetailContainer/> } />
@@ -31,7 +32,7 @@ function App() {
               <Route path='*' element={ <Navigate to='/' /> } />
           </Routes>
 
-          {/* <Footer/> */}
+          <Footer/>
       </BrowserRouter>
 
     </CartProvider>

@@ -38,7 +38,7 @@ export const ItemListContainer = () => {
     }, [categId])
 
     return (
-        <section className="item-list-container">
+        <section className="container my-3">
             
             { loading ? <Loading/> : <ItemList products={products} />}
             

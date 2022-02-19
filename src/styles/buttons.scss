@@ -1,10 +1,10 @@
-
 .button-mystyle{
     background-color: $color-principal;
     border-color: darken($color: $color-principal, $amount: 25);
     height: 2.5rem;
     text-decoration: none;
-    color: darken($color: $color-principal, $amount: 25);
+    color: white;
+    font-weight: bold;
 
     &:hover{
         background-color: lighten($color: $color-principal, $amount: 20);
@@ -21,6 +21,34 @@
 
     &:disabled{
         background-color: lighten($color: $color-principal, $amount: 10);
+        border-color: white;
+    }
+}
+
+.button-mystyletwo{
+    background-color: white ;
+    color: $color-principal;
+    border-color: darken($color:  $color-principal, $amount: 25);
+    height: 2.5rem;
+    text-decoration: none;
+    
+    font-weight: bold;
+
+    &:hover{
+        background-color: lighten($color:  $color-principal, $amount: 20);
+        border-color: lighten($color:  $color-principal, $amount: 10);
+    }
+
+    &:active{
+        background-color: $color-secondary;
+    }
+
+    &:visited{
+        background-color: darken($color:  $color-principal, $amount: 40);
+    }
+
+    &:disabled{
+        background-color: lighten($color:  $color-principal, $amount: 10);
         border-color: white;
     }
 }

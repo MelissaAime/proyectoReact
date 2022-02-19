@@ -26,21 +26,25 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
     }
 
     return(
-        <div>
-            <h2>{name}</h2>
-            <img src={image} alt={name} />
-            <h4>Detalles del producto elegido:</h4>
-            <p>{desc}</p>
-            <p>Precio: ${price} </p>
+        <div className='container my-3 my-container'>
+            <h2 className='title-prod'>{name}</h2>
+            <img src={image} alt={name} className='my-img'/>
+            <div className='detail-prod'>
+                <h5>Detalles del producto elegido:</h5>
+                <p>{desc}</p>
+            </div>
+            <p className='price-prod'>Precio: ${price} </p>
             
 
             {
                 isInCart(id)
                 ?   
-                <Button className='button-mystyle my-2'><Link to='/carrito' className='my-link' > Finalizar compra</Link></Button>
+                <Link className='my-link' to='/carrito' > 
+                    <Button className='button-mystyle'>Finalizar compra</Button>
+                </Link>
                 
                 :
-                <>
+                <div className='count-prod'>
                     <ItemCount 
                         max={stock}
                         counter={cantidad}
@@ -48,13 +52,13 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
                     />
                     
                     <Button 
-                        className="button-mystyle my-2" 
+                        className="button-mystyle my-3" 
                         onClick={handleAgregar}
                         disabled= {cantidad === 0}
                     >
                         Agregar al carrito
                     </Button>
-                </>
+                </div>
 
             }
 

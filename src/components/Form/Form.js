@@ -26,18 +26,20 @@ export const Form = () => {
     return(
         <div className="container my-4">
             <form onSubmit={handleSubmit}>
+                <p>Ingrese su nombre:</p>
                 <input 
-                    className="form-control my-3" 
+                    className="form-control mx-2 my-3" 
                     type='text' 
-                    placeholder='Ingresa tu nombre'
+                    placeholder='Nombre'
                     value={values.nombre}
                     onChange={handleInputChange}
                     name='nombre'
                 />
+                <p>Ingrese su email:</p>
                 <input 
-                    className="form-control my-3" 
+                    className="form-control mx-2 my-3" 
                     type='email' 
-                    placeholder='Ingresa tu email'
+                    placeholder='Email'
                     value={values.email}
                     onChange={handleInputChange}
                     name='email'

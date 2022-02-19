@@ -12,7 +12,7 @@ export const NavBar = () => {
                         src="https://via.placeholder.com/200"
                         width="60"
                         height="60"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top imagen"
                         alt="logo"
                     />
                     <Link to='/' className='navbar-brand'>TRAPAO</Link>
