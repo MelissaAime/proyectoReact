@@ -1,9 +1,10 @@
 import {useState, useEffect} from 'react'
-import { seeStock } from '../../functions/seeStock'
 import { ItemList } from '../ItemList/ItemList'
 import { Loading } from '../Loading/Loading'
 import './ItemListContainer.scss'
 import { useParams } from 'react-router-dom'
+import { db } from '../../firebase/config'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 export const ItemListContainer = () => {
 
@@ -16,21 +17,24 @@ export const ItemListContainer = () => {
 
         setLoading(true)
 
-        seeStock()
-            .then((result) => {
-                if (categId){
-                   setProducts( result.filter( (el) => el.category === categId) ) 
-                } else {
-                    setProducts(result)
-                }
-                
-            })
-            .catch((err) => {
-                console.log(err)
+        const productosRef = collection(db, 'productos')
+
+        const q = categId ? query(productosRef, where("category", "==", categId)) : productosRef
+
+        getDocs(q)
+            .then((resp) => {
+                setProducts(resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }))
             })
             .finally(() => {
                 setLoading(false)
             })
+
+        
     }, [categId])
 
     return (

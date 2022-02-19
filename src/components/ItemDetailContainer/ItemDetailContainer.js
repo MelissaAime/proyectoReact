@@ -1,9 +1,8 @@
-
 import { useEffect, useState } from 'react';
-import { seeStock } from '../../functions/seeStock';
 import { useParams } from 'react-router-dom';
 import { Loading } from '../Loading/Loading';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { doc, getDoc } from 'firebase/firestore';
 
 
 export const ItemDetailContainer = () => {
@@ -16,15 +15,17 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        seeStock()
-            .then((result) => {
-                setItem( result.find( (el) => el.id === Number(itemId) ) )
-                
+        const docRef = doc(db, "productos", itemId)
+
+        getDoc(docRef)
+            .then((doc) => {
+                setItem({id: doc.id, ...doc.data()})
             })
-            
             .finally(() => {
                 setLoading(false)
             })
+
+        
     }, []) 
 
     return(

@@ -10,7 +10,6 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
 
     const { addToCart, isInCart } = useContext (CartContext)
 
-    console.log(cart);
 
     const handleAgregar = () => {
         if (cantidad === 0) return
