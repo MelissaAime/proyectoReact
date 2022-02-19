@@ -37,7 +37,7 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
             {
                 isInCart(id)
                 ?   
-                <Button className='button-mystyle my-2'><Link to='/carrito' > Finalizar compra</Link></Button>
+                <Button className='button-mystyle my-2'><Link to='/carrito' className='my-link' > Finalizar compra</Link></Button>
                 
                 :
                 <>
@@ -50,6 +50,7 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
                     <Button 
                         className="button-mystyle my-2" 
                         onClick={handleAgregar}
+                        disabled= {cantidad === 0}
                     >
                         Agregar al carrito
                     </Button>

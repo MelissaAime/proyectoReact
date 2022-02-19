@@ -2,8 +2,15 @@
     color: rgba(255,255,255,.55);
     font-size: 1.2rem;
     text-decoration: none;
+    visibility: visible;
+    opacity: 1;
 
     &:hover{
         color:white;
     }
+}
+
+.cart-hidden {
+    opacity: 0;
+    visibility: hidden;
 }

@@ -5,10 +5,10 @@ import { CartContext } from '../../context/CartContext';
 
 export const CartWidget = () => {
 
-    const { cantidadCart } = useContext(CartContext)
+    const { cantidadCart, cart } = useContext(CartContext)
 
     return(
-        <Link to='/carrito' className='cart-widget'>
+        <Link to='/carrito' className={`cart-widget ${cart.length === 0 ? 'cart-hidden' : ''} `}>
             <BsHandbag/>
             <span>{cantidadCart()}</span>
         </Link>

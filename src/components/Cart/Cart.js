@@ -1,11 +1,20 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { BsTrash } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { Button } from "react-bootstrap";
 
 
 export const Cart = () => {
 
     const { cart, totalCompra, clearCart, removeItem } = useContext(CartContext)
+
+    if (cart.length === 0) {
+        return <div className="container mx-4 my-2">
+            <h4>Carrito vacío</h4>
+            <Button className="button-mystyle"><Link to="/productos" className="my-link" >Volver</Link></Button>
+        </div>
+    }
 
     return(
         <div className='container my-3'>

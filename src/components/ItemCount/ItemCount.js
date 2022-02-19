@@ -9,12 +9,24 @@ export const ItemCount = ({max, min = 0, counter, setCounter}) => {
     const handleSuma = () => {
         counter < max && setCounter(counter + 1)
     }
+
+    const configRestar = {
+        className: 'button-mystyle',
+        disabled: counter === min,
+        onClick: handleResta
+    }
+
+    const configSumar = {
+        className: 'button-mystyle',
+        disabled: counter === max,
+        onClick: handleSuma
+    }
     
     return(
         <div>
-            <Button className="button-mystyle" onClick={handleResta}>-</Button>
+            <Button {...configRestar}>-</Button>
             <span className="mx-3">{counter}</span>
-            <Button className="button-mystyle" onClick={handleSuma}>+</Button>
+            <Button {...configSumar}>+</Button>
         </div>
     )
 }
