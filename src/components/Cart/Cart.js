@@ -12,7 +12,7 @@ export const Cart = () => {
     if (cart.length === 0) {
         return <div className="container mx-5 my-4">
             <h4>Carrito vacío</h4>
-            <Button className="button-mystyle"><Link to="/productos" className="my-link">Volver</Link></Button>
+            <Link to="/productos" className="my-link"><Button className="button-mystyle">Volver</Button></Link>
         </div>
     }
     
