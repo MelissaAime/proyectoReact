@@ -1,4 +1,5 @@
 import { Button } from "react-bootstrap";
+import { BsPlus, BsDash} from 'react-icons/bs';
 
 export const ItemCount = ({max, min = 0, counter, setCounter}) => {
 
@@ -24,9 +25,9 @@ export const ItemCount = ({max, min = 0, counter, setCounter}) => {
     
     return(
         <div>
-            <Button {...configRestar}>-</Button>
+            <Button {...configRestar}> <BsDash/> </Button>
             <span className="mx-3">{counter}</span>
-            <Button {...configSumar}>+</Button>
+            <Button {...configSumar}> <BsPlus/> </Button>
         </div>
     )
 }

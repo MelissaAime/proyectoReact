@@ -1,26 +1,31 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
+import logo from '../../images/logo.png';
 
 export const NavBar = () => {
+
+    
     return(
         <header className="header">
             
             <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Container>
-                    <img
-                        src="https://via.placeholder.com/200"
-                        width="60"
-                        height="60"
-                        className="d-inline-block align-top imagen"
-                        alt="logo"
-                    />
-                    <Link to='/' className='navbar-brand'>TRAPAO</Link>
+                    <Link to='/'>
+                        <img
+                            src={logo}
+                            width="60"
+                            height="60"
+                            className="d-inline-block align-top imagen"
+                            alt="logo"
+                        />
+                    </Link>
+                    <Link to='/' className='navbar-brand mx-3'>TRAPAO</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Link to='/' role='button' className='nav-link'>Inicio</Link>
-                            <NavDropdown title="Productos" id="collasible-nav-dropdown">
+                            <Link to='/' role='button' className='nav-link mx-3'>Inicio</Link>
+                            <NavDropdown title="Productos" id="collasible-nav-dropdown" className='mx-3'>
                                 <Link to='/productos/carteras' className='dropdown-item' role='button'>Carteras</Link>
                                 <Link to='/productos/mochilas' className='dropdown-item' role='button'>Mochilas</Link>
                                 <Link to='/productos/billeteras' className='dropdown-item' role='button'>Billeteras</Link>
@@ -29,7 +34,7 @@ export const NavBar = () => {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Link to='/contacto' role='button' className='nav-link'>Contacto</Link> 
+                            <Link to='/contacto' role='button' className='nav-link mx-3'>Contacto</Link> 
                         </Nav>
 
                         <CartWidget/>

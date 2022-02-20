@@ -5,6 +5,7 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
+    border-radius: 20px;
 
     &:hover{
         background-color: lighten($color: $color-principal, $amount: 20);
