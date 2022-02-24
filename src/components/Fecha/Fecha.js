@@ -1,0 +1,1 @@
+export const Fecha = new Date().getDay();

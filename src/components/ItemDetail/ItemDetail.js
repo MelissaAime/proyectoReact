@@ -3,6 +3,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
+import { Fecha } from '../Fecha/Fecha';
 
 export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
 
@@ -33,7 +34,11 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
                 <h5>Detalles del producto elegido:</h5>
                 <p>{desc}</p>
             </div>
-            <p className='price-prod'>Precio: ${price} </p>
+            {
+                Fecha === 4
+                ? <p className='price-prod'>Precio: ${price * 0.85} </p>
+                : <p className='price-prod'>Precio: ${price} </p>
+            }
             
 
             {

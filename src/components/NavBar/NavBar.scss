@@ -32,4 +32,20 @@
     border-radius:50%; 
 }
 
+.bar-desc{
+    height: 4rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: lighten($color: $color-principal, $amount: 30);
+    margin: 0;
+    padding: 1.2rem 10rem;
+}
 
+@media only screen and (max-width: 900px){
+    .bar-desc{
+        height: 2.8rem;
+        font-size: 0.8rem;
+        padding: 1rem 3rem;
+    }
+}

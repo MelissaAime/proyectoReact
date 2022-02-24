@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { BsTrash } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
+import { Fecha } from "../Fecha/Fecha";
 
 
 export const Cart = () => {
@@ -26,7 +27,12 @@ export const Cart = () => {
                     <div key={item.id}> 
                         <h5>{item.name}</h5>  
                         <p>Cantidad: {item.cantidad}</p>
-                        <p>Precio: ${item.price * item.cantidad}</p>
+                        {
+                            Fecha === 4 
+                            ? <p>Precio: ${item.price * item.cantidad * 0.85}</p>
+                            : <p>Precio: ${item.price * item.cantidad}</p>
+                        }
+                        
 
                         <Button className='button-mystyletwo' onClick={() => removeItem(item.id)}>
                                 <BsTrash/>
