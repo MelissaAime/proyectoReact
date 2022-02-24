@@ -1,11 +1,12 @@
-import { BsInstagram, BsFacebook } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsPhone } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
         <footer className="style-footer text-center">
             <div className="container my-4">
                 
-                <table size="lg" className="style-footer-table">
+                <table  size="md" className="style-footer-table">
                     <thead>
                         <tr>
                             <th>Links</th>
@@ -14,19 +15,20 @@ export const Footer = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Carteras</td>
-                            <td><BsFacebook/></td> 
-                            <td><BsInstagram/></td> 
-                            <td><BsFacebook/></td>
+                            <td><Link to="/productos/carteras" className="my-link">Carteras</Link></td>
+                            
+                            <td><Link to="/" className="my-link"> <BsFacebook/> </Link></td> 
+                            <td><Link to="/" className="my-link"> <BsInstagram/> </Link></td> 
+                            <td><Link to="/" className="my-link"> <BsPhone/> </Link></td>
                         </tr>
                         <tr>
-                            <td>Mochilas</td>
+                            <td><Link to="/productos/mochilas" className="my-link">Mochilas</Link></td>
                         </tr>
                         <tr>
-                            <td>Billeteras</td>
+                            <td><Link to="/productos/billeteras" className="my-link">Billeteras</Link></td>
                         </tr>
                         <tr>
-                            <td>Todos los productos</td> 
+                            <td><Link to="/productos" className="my-link">Todos los productos</Link></td> 
                         </tr>
                     </tbody>
 
