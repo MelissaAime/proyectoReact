@@ -10,6 +10,7 @@ import { Form } from './components/Form/Form';
 import { CartProvider } from './context/CartContext';
 import { Cart } from './components/Cart/Cart';
 import { Footer } from './components/Footer/Footer';
+import { Checkout } from './components/Checkout/Checkout';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
               <Route path='/contacto' element= { <Contact/> } />
               <Route path='/contacto' element= { <Form/> } />
               <Route path='/carrito' element= { <Cart/> } />
+              <Route path='/checkout' element= { <Checkout/> } />
               <Route path='*' element={ <Navigate to='/' /> } />
           </Routes>
 

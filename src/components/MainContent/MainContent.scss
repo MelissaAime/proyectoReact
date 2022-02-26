@@ -1,4 +1,22 @@
-.main-content{
+.main-princ{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "titulo imagen"
+                         "texto imagen";
+}
+.main-title{
+    grid-area: titulo;
     font-size: 30px;
     font-style: italic;
+}
+
+.main-text{
+    grid-area: texto;
+    text-align: justify;
+    padding-right: 2rem;
+}
+
+.main-image{
+    grid-area: imagen;
 }

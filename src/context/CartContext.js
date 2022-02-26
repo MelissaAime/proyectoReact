@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Fecha } from "../components/Fecha/Fecha";
 
 export const CartContext = createContext()
 
@@ -18,8 +19,20 @@ export const CartProvider = ({children}) => {
         return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
     }
 
+    // const totalCompra = () => {
+    //     return cart.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
+    // }
+
     const totalCompra = () => {
-        return cart.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
+        return(
+            <>
+                {
+                    Fecha === 4
+                    ? cart.reduce((acc, prod) => acc + prod.cantidad * prod.price * 0.85, 0)
+                    : cart.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
+                }
+            </>
+        )
     }
 
     const clearCart = () => {
