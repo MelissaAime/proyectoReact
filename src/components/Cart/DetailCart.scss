@@ -1,0 +1,38 @@
+.image-tamaño{
+    height: 6rem;
+    width: 6rem;
+}
+
+.detail{
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "image title canprice trash";
+    border-bottom: rgb(182, 178, 178) 1px solid;
+    margin-bottom: 2rem;
+
+
+    &-image{
+        grid-area: image;
+        text-align: center;
+    }
+    &-title{
+        grid-area: title;
+        padding-top: 2rem;
+        text-align: center;
+    }
+    &-canprice{
+        grid-area: canprice;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+    &-button{
+        grid-area: trash;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    
+}

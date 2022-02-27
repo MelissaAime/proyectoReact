@@ -3,9 +3,9 @@ import { CartContext } from "../../context/CartContext";
 import { Navigate } from "react-router-dom";
 import { FinCompra } from './FinCompra'
 import { generarOrden } from "../../firebase/generarOrden";
-import { validar } from './validar'
 import { Formulario } from "./Formulario";
 import { DetailCart } from "../Cart/DetailCart";
+import Swal from 'sweetalert2'
 
 export const Checkout = () => {
 
@@ -31,8 +31,18 @@ export const Checkout = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        validar(values) && generarOrden(values, cart, totalCompra, setOrderId, clearCart )
+        if (values.nombre.length > 3 && values.email.length > 3 && values.tel.length > 5) {
+            generarOrden(values, cart, totalCompra, setOrderId, clearCart)
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Campos inválidos',
+                text: 'Revise su información'
+              })
+        }
+
     }
+   
 
     if (orderId){
         return <FinCompra order={orderId} />
@@ -50,6 +60,7 @@ export const Checkout = () => {
             <div className="container-style">
                 <Formulario className="container-style-form" values={values} handleSubmit={handleSubmit} handleInputChange={handleInputChange} /> 
                 <div className="container-style-detail">
+                    <h4>Detalle de la compra</h4>
                     <DetailCart />
                 </div>
             </div>

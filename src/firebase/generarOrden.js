@@ -38,6 +38,6 @@ export const generarOrden = async (values, cart, totalCompra, setOrderId, clearC
                 clearCart()
             })
     } else {
-        alert("Hay items sin stock")
+        alert('sin stock')
     }
 }

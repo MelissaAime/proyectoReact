@@ -10,7 +10,7 @@ const dias = [
     'sábados',      //6
 ]
 
-const cuando = 4 //dia de la oferta
+const cuando = 0 //dia de la oferta
 
 export const nombreDia= dias[cuando]
 

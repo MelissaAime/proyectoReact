@@ -33,10 +33,10 @@
 }
 
 .bar-desc{
-    height: 4rem;
+    height: 5rem;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: lighten($color: $color-principal, $amount: 30);
     margin: 0;
     text-align: center;
@@ -45,8 +45,8 @@
 
 @media only screen and (max-width: 900px){
     .bar-desc{
-        height: 2.8rem;
-        font-size: 0.8rem;
+        height: 4rem;
+        font-size: 0.6rem;
         padding: 1rem;
     }
 }
