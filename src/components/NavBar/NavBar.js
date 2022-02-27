@@ -2,18 +2,15 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 import logo from '../../images/logo.png';
-import { conDescuento} from '../Fecha/Fecha';
+import { nombreDia} from '../Oferta/Oferta';
 
 export const NavBar = () => {
 
     
     return(
         <>
-            {
-                conDescuento
-                ? <p className='bar-desc'>Todos los jueves 15% de descuento en toda la web</p>
-                : <span></span>
-            }
+            <p className='bar-desc'>Todos los {nombreDia} 15% de descuento en toda la web</p>
+
             <header className="header">
                 
                 <Navbar collapseOnSelect expand="lg" variant="dark">

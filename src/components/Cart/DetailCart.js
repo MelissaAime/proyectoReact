@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Button } from "react-bootstrap";
 import { BsTrash } from 'react-icons/bs';
-import { conDescuento } from "../Fecha/Fecha";
+import { conDescuento } from "../Oferta/Oferta";
 
 export const DetailCart = () => {
 
@@ -14,7 +14,7 @@ export const DetailCart = () => {
                 cart.map( (item) => (
                     <div key={item.id}> 
                         <h5>{item.name}</h5>  
-                        <img alt='producto' src={item.image}/>
+                        <img alt={item.name} src={item.image}/>
                         <p>Cantidad: {item.cantidad}</p>
 
                         {

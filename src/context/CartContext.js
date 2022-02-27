@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { conDescuento} from "../components/Fecha/Fecha";
+import { conDescuento} from "../components/Oferta/Oferta";
 
 export const CartContext = createContext()
 

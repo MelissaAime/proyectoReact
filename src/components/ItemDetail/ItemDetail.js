@@ -3,7 +3,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
-import { conDescuento } from '../Fecha/Fecha';
+import { conDescuento } from '../Oferta/Oferta';
 
 export const ItemDetail = ({name, id, desc, price, priceOff, image, stock}) => {
 

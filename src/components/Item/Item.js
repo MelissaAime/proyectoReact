@@ -1,6 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import { conDescuento} from '../Fecha/Fecha'
+import { conDescuento} from '../Oferta/Oferta'
 
 export const Item = ( {name, id, desc, price, priceOff, image, stock} ) => {
 
