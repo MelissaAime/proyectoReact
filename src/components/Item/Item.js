@@ -1,8 +1,8 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import { Fecha } from '../Fecha/Fecha'
+import { conDescuento} from '../Fecha/Fecha'
 
-export const Item = ( {name, id, desc, price, image, stock} ) => {
+export const Item = ( {name, id, desc, price, priceOff, image, stock} ) => {
 
     
 
@@ -15,8 +15,8 @@ export const Item = ( {name, id, desc, price, image, stock} ) => {
                 
 
                 {
-                    Fecha === 4 //oferta dia jueves
-                    ? <Card.Text>Antes: <strike>${price}</strike> Ahora: ${price*0.85}</Card.Text>
+                    conDescuento //oferta
+                    ? <Card.Text>Antes: <strike>${price}</strike> Ahora: ${priceOff}</Card.Text>
                     : <Card.Text>Precio: ${price}</Card.Text>
                 }
 

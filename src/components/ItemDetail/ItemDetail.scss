@@ -7,7 +7,7 @@
     grid-template-areas: "img title"
                          "img detail"
                          "img price"
-                         "img count";
+                         "img countt";
 }
 
 .my-img{
@@ -30,5 +30,5 @@
 }
 
 .count-prod{
-    grid-area: count;
+    grid-area: countt;
 }

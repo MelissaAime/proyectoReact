@@ -3,9 +3,9 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
-import { Fecha } from '../Fecha/Fecha';
+import { conDescuento } from '../Fecha/Fecha';
 
-export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
+export const ItemDetail = ({name, id, desc, price, priceOff, image, stock}) => {
 
     const [cantidad, setCantidad] = useState(0)
 
@@ -17,7 +17,7 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
 
         if (!isInCart(id)){
             const addItem ={
-                id, name, price, stock, cantidad 
+                id, name, price, priceOff, stock, cantidad 
             }
     
             addToCart(addItem)
@@ -35,8 +35,8 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
                 <p>{desc}</p>
             </div>
             {
-                Fecha === 4
-                ? <p className='price-prod'>Precio: ${price * 0.85} </p>
+                conDescuento
+                ? <p className='price-prod'>Precio: ${priceOff} </p>
                 : <p className='price-prod'>Precio: ${price} </p>
             }
             
@@ -44,9 +44,14 @@ export const ItemDetail = ({name, id, desc, price, image, category, stock}) => {
             {
                 isInCart(id)
                 ?   
-                <Link className='my-link' to='/carrito' > 
-                    <Button className='button-mystyle'>Finalizar compra</Button>
-                </Link>
+                <div className='count-prod'>
+                    <Link className='my-link' to='/productos' > 
+                        <Button className='button-mystyletwo'>Seguir comprando</Button>
+                    </Link>
+                    <Link className='my-link' to='/carrito' > 
+                        <Button className='button-mystyle'>Finalizar compra</Button>
+                    </Link>
+                </div>
                 
                 :
                 <div className='count-prod'>

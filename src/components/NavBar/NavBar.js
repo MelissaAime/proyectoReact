@@ -2,7 +2,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 import logo from '../../images/logo.png';
-import { Fecha } from '../Fecha/Fecha';
+import { conDescuento} from '../Fecha/Fecha';
 
 export const NavBar = () => {
 
@@ -10,7 +10,7 @@ export const NavBar = () => {
     return(
         <>
             {
-                Fecha === 4
+                conDescuento
                 ? <p className='bar-desc'>Todos los jueves 15% de descuento en toda la web</p>
                 : <span></span>
             }

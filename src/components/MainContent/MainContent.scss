@@ -20,3 +20,18 @@
 .main-image{
     grid-area: imagen;
 }
+
+@media only screen and (max-width: 900px) {
+    .main-princ{
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 45% 40%;
+        grid-template-areas: "titulo"
+                            "imagen"
+                            "texto";
+    }
+
+    .main-image{
+        width: 70%;
+        height: 90%;
+    }
+}
