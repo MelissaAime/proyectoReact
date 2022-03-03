@@ -4,6 +4,7 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { conDescuento } from '../Oferta/Oferta';
+import { SinStock } from '../Item/SinStock';
 
 export const ItemDetail = ({name, id, desc, price, priceOff, image, stock}) => {
 
@@ -61,13 +62,18 @@ export const ItemDetail = ({name, id, desc, price, priceOff, image, stock}) => {
                         setCounter={setCantidad}
                     />
                     
-                    <Button 
-                        className="button-mystyle my-3" 
-                        onClick={handleAgregar}
-                        disabled= {cantidad === 0}
-                    >
-                        Agregar al carrito
-                    </Button>
+                    {
+                        stock === 0
+                        ? <Button className='button-mystyletwo my-3' disabled> SIN STOCK </Button>
+                        :
+                        <Button 
+                            className="button-mystyle my-3" 
+                            onClick={handleAgregar}
+                            disabled= {cantidad === 0}
+                        >
+                            Agregar al carrito
+                        </Button>
+                    }
                 </div>
 
             }

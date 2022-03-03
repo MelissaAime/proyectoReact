@@ -1,0 +1,9 @@
+.without-stock{
+    padding: 2px 6px;
+    box-shadow: 0 0 3px gray;
+    border-radius: 6px;
+
+    &:hover{
+        box-shadow: 0 0 6px gray;
+    }
+}
