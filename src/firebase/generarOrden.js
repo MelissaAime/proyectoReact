@@ -1,5 +1,6 @@
 import { collection, writeBatch, getDocs, addDoc, Timestamp, query, where, documentId } from "firebase/firestore"
-import { db } from "./config"
+import { db } from "./config";
+import Swal from 'sweetalert2';
 
 
 export const generarOrden = async (values, cart, totalCompra, setOrderId, clearCart) => {
@@ -38,6 +39,10 @@ export const generarOrden = async (values, cart, totalCompra, setOrderId, clearC
                 clearCart()
             })
     } else {
-        alert('sin stock')
+        Swal.fire({
+            icon: 'error',
+            title: 'Productos sin stock',
+            text: 'Revisa los productos elegidos'
+          })
     }
 }

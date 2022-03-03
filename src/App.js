@@ -6,7 +6,6 @@ import { MainContent } from './components/MainContent/MainContent';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Contact } from './components/Contact/Contact';
-import { Form } from './components/Form/Form';
 import { CartProvider } from './context/CartContext';
 import { Cart } from './components/Cart/Cart';
 import { Footer } from './components/Footer/Footer';
@@ -28,7 +27,7 @@ function App() {
               <Route path='/productos/:categId' element={ <ItemListContainer/> } />
               <Route path='/detalles/:itemId' element={ <ItemDetailContainer/> } />
               <Route path='/contacto' element= { <Contact/> } />
-              <Route path='/contacto' element= { <Form/> } />
+
               <Route path='/carrito' element= { <Cart/> } />
               <Route path='/checkout' element= { <Checkout/> } />
               <Route path='*' element={ <Navigate to='/' /> } />

@@ -17,9 +17,9 @@ export const Footer = () => {
                         <tr>
                             <td><Link to="/productos/carteras" className="my-link">Carteras</Link></td>
                             
-                            <td><Link to="/" className="my-link"> <BsFacebook/> </Link></td> 
-                            <td><Link to="/" className="my-link"> <BsInstagram/> </Link></td> 
-                            <td><Link to="/" className="my-link"> <BsPhone/> </Link></td>
+                            <td><a href='https://www.facebook.com/' target="_blank" className="my-link"> <BsFacebook/> </a></td> 
+                            <td><a href='https://www.instagram.com/' target="_blank" className="my-link"> <BsInstagram/> </a></td> 
+                            <td><a href='https://www.whatsapp.com/' target="_blank" className="my-link"> <BsPhone/> </a></td>
                         </tr>
                         <tr>
                             <td><Link to="/productos/mochilas" className="my-link">Mochilas</Link></td>

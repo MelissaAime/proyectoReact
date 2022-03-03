@@ -2,7 +2,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 import logo from '../../images/logo.png';
-import { nombreDia} from '../Oferta/Oferta';
+import { minEnvio, nombreDia} from '../Oferta/Oferta';
 
 
 export const NavBar = () => {
@@ -10,7 +10,7 @@ export const NavBar = () => {
     
     return(
         <> 
-            <p className='bar-desc'>Todos los {nombreDia} 15% de descuento en toda la web. <br/> Envío gratis a partir de los $7000</p>
+            <p className='bar-desc'>Todos los {nombreDia} 15% de descuento en toda la web. <br/> Envío gratis a partir de los ${minEnvio}</p>
 
             <header className="header">
                 

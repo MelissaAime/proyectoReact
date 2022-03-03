@@ -37,7 +37,7 @@ export const Checkout = () => {
             Swal.fire({
                 icon: 'error',
                 title: 'Campos inválidos',
-                text: 'Revise su información'
+                text: 'Algunos campos están incompletos o son incorrectos'
               })
         }
 
