@@ -2,7 +2,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 import logo from '../../images/logo.png';
-import { minEnvio, nombreDia} from '../Oferta/Oferta';
+import { minEnvio, nombreDia } from '../Oferta/Oferta';
 
 
 export const NavBar = () => {

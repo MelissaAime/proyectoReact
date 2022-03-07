@@ -4,7 +4,6 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import { conDescuento } from '../Oferta/Oferta';
-import { SinStock } from '../Item/SinStock';
 
 export const ItemDetail = ({name, id, desc, price, priceOff, image, stock}) => {
 

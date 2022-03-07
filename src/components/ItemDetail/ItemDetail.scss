@@ -2,6 +2,7 @@
     height: 22rem;
     align-items: center;
     display: grid;
+    text-align: center;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 35% 15% 25%;
     grid-template-areas: "img title"
@@ -12,6 +13,7 @@
 
 .my-img{
     grid-area: img;
+    margin: 4rem;
     height: 100%;
     width: 70%;
 }
@@ -31,4 +33,12 @@
 
 .count-prod{
     grid-area: countt;
+}
+
+@media only screen and (max-width: 1000px){
+
+    .my-img{
+        margin: 0;
+        width: 100%;
+    }
 }
